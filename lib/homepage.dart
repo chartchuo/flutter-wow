@@ -4,21 +4,56 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: <Widget>[
-          ListTile(
-            leading: Text('1'),
-            title: Text('Safe Area'),
-            trailing: Icon(Icons.navigate_next),
-            onTap: () => Navigator.pushNamed(context, '/01'),
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+              Colors.greenAccent,
+              Colors.orangeAccent,
+            ])),
+        child: ListView(
+          children: <Widget>[
+            MainMenuItem('01', 'SafeArea', '/01'),
+            MainMenuItem('02', 'Expanded', '/02'),
+            MainMenuItem('03', 'Wrap', '/03'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class MainMenuItem extends StatelessWidget {
+  final String leading;
+  final String title;
+  final String navigatorName;
+  const MainMenuItem(
+    this.leading,
+    this.title,
+    this.navigatorName, {
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+      child: Card(
+        color: Colors.white70,
+        child: ListTile(
+          leading: Text(
+            leading,
+            style: TextStyle(fontSize: 32, fontWeight: FontWeight.w100),
           ),
-          ListTile(
-            leading: Text('2'),
-            title: Text('Expanded'),
-            trailing: Icon(Icons.navigate_next),
-            onTap: () => Navigator.pushNamed(context, '/02'),
-          )
-        ],
+          title: Text(title),
+          trailing: Icon(
+            Icons.navigate_next,
+            size: 24,
+          ),
+          onTap: () => Navigator.pushNamed(context, navigatorName),
+        ),
       ),
     );
   }

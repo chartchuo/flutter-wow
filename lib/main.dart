@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomePage(),
         '/01': (context) => SafeAreaSample(),
         '/02': (context) => ExpandedSample(),
+        '/03': (context) => WrapSample(),
       },
     );
   }
