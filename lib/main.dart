@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/': (context) => HomePage(),
-        '/01_safe_area': (context) => SafeAreaSample(),
+        '/01': (context) => SafeAreaSample(),
+        '/02': (context) => ExpandedSample(),
       },
     );
   }

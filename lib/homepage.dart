@@ -10,7 +10,13 @@ class HomePage extends StatelessWidget {
             leading: Text('1'),
             title: Text('Safe Area'),
             trailing: Icon(Icons.navigate_next),
-            onTap: () => Navigator.pushNamed(context, '/01_safe_area'),
+            onTap: () => Navigator.pushNamed(context, '/01'),
+          ),
+          ListTile(
+            leading: Text('2'),
+            title: Text('Expanded'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () => Navigator.pushNamed(context, '/02'),
           )
         ],
       ),
