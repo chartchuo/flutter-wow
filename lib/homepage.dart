@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
             MainMenuItem('03', 'Wrap', '/03'),
             MainMenuItem('04', 'Animated Container', '/04'),
             MainMenuItem('05', 'Provider', '/05'),
+            MainMenuItem('06', 'FutureBuilder', '/06'),
           ],
         ),
       ),

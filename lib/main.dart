@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         '/03': (context) => WrapSample(),
         '/04': (context) => AnimatedContainerSample(),
         '/05': (context) => ProviderHome(),
+        '/06': (context) => FutureBuilderSample(),
       },
     );
   }
